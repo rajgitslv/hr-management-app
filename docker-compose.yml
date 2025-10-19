@@ -6,7 +6,8 @@ services:
     image: postgres:15-alpine
     container_name: hrpayroll-postgres
     environment:
-      POSTGRES_DB: hrpayroll
+      POSTGRES_D
+      B: hrpayroll
       POSTGRES_USER: postgres
       POSTGRES_PASSWORD: postgres
     ports:

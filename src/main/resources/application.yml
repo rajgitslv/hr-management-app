@@ -3,6 +3,10 @@ spring:
     name: hr-management-app
   profiles:
     active: dev
+  autoconfigure:
+    exclude:
+      - org.springframework.boot.artemis.autoconfigure.ArtemisAutoConfiguration
+      - org.springframework.kafka.boot.autoconfigure.KafkaAutoConfiguration
 
   jpa:
     open-in-view: false
@@ -60,7 +64,7 @@ management:
         enabled: true
   health:
     kafka:
-      enabled: true
+      enabled: false
     db:
       enabled: true
 
