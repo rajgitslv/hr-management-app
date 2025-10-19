@@ -1,0 +1,12 @@
+apiVersion: v1
+kind: ConfigMap
+metadata:
+  name: hrpayroll-config
+  namespace: hrpayroll
+data:
+  SPRING_PROFILES_ACTIVE: "prod"
+  DB_HOST: "postgres-service"
+  DB_PORT: "5432"
+  DB_NAME: "hrpayroll"
+  KAFKA_BROKERS: "kafka-service:9092"
+  ARTEMIS_BROKER_URL: "tcp://artemis-service:61616"

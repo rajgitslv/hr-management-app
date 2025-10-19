@@ -1,0 +1,15 @@
+{
+  "permissions": {
+    "allow": [
+      "Bash(mvn clean compile -DskipTests)",
+      "Bash(find src/main/java -name \"*Event.java\" ! -name \"DomainEvent.java\" -exec sed -i '' '/@Override/d' {} ;)",
+      "Bash(mvn clean compile)",
+      "Bash(curl -s http://localhost:8080/api/employees)",
+      "Bash(python3 -m json.tool)",
+      "Bash(curl -s http://localhost:8080/api/employees/5a60b160-167b-46f5-a4ad-2f1176f2f53d)",
+      "Bash(curl -X PUT 'http://localhost:8080/api/employees/5a60b160-167b-46f5-a4ad-2f1176f2f53d/salary?newSalary=85000&currency=USD')"
+    ],
+    "deny": [],
+    "ask": []
+  }
+}
