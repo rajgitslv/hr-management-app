@@ -1,6 +1,6 @@
 spring:
   application:
-    name: employee-management-ddd
+    name: hr-management-app
   profiles:
     active: dev
 
@@ -29,7 +29,7 @@ spring:
   kafka:
     bootstrap-servers: localhost:9092
     consumer:
-      group-id: hr-payroll-group
+      group-id: hr-management-group
       auto-offset-reset: earliest
       key-deserializer: org.apache.kafka.common.serialization.StringDeserializer
       value-deserializer: org.springframework.kafka.support.serializer.JsonDeserializer
@@ -79,16 +79,16 @@ app:
   events:
     kafka:
       enabled: true
-      topic-prefix: hr-payroll
+      topic-prefix: hr-management
     jms:
       enabled: true
-      queue-prefix: hr.payroll
+      queue-prefix: hr.management
 
 # Logging Configuration
 logging:
   level:
     root: INFO
-    com.hrpayroll: DEBUG
+    com.hrmanagement: DEBUG
     org.springframework.web: INFO
     org.springframework.security: INFO
     org.hibernate.SQL: DEBUG
