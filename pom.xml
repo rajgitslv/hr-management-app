@@ -19,9 +19,9 @@
     <description>Domain-Driven Design, Event-Driven, TDD Spring Boot application for HR Management</description>
 
     <properties>
-        <java.version>25</java.version>
-        <maven.compiler.source>25</maven.compiler.source>
-        <maven.compiler.target>25</maven.compiler.target>
+        <java.version>24</java.version>
+        <maven.compiler.source>24</maven.compiler.source>
+        <maven.compiler.target>24</maven.compiler.target>
         <spring-cloud.version>2024.0.0</spring-cloud.version>
         <rest-assured.version>5.4.0</rest-assured.version>
         <archunit.version>1.2.1</archunit.version>
@@ -260,9 +260,9 @@
                 <artifactId>maven-compiler-plugin</artifactId>
                 <version>3.13.0</version>
                 <configuration>
-                    <source>25</source>
-                    <target>25</target>
-                    <release>25</release>
+                    <source>24</source>
+                    <target>24</target>
+                    <release>24</release>
                     <compilerArgs>
                         <arg>-parameters</arg>
                     </compilerArgs>
